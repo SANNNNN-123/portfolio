@@ -1,0 +1,25 @@
+/* ASCII art styles */
+.ascii-portrait {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    line-height: 1;
+    white-space: pre;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 0;
+}
+
+.ascii-portrait pre {
+    display: inline-block;
+    text-align: left;
+    background: repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 1px,
+        transparent 1px,
+        transparent 4px
+    );
+    padding: 10px;
+    color: white;
+    mix-blend-mode: difference;
+}

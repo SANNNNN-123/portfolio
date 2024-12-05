@@ -1,0 +1,78 @@
+/* Main styles */
+@import 'receipt.css';
+@import 'ascii-art.css';
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.receipt-content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.date, .order {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.about-section {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+}
+
+.about-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.card-info {
+    margin: 15px 0;
+    padding: 10px 0;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+}
+
+.thank-you {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.barcode {
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+.barcode p {
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: 'Source Code Pro', monospace;
+}
