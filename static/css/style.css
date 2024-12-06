@@ -1,0 +1,278 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: 'VT323', monospace;
+}
+
+
+/* Receipt paper effect */
+
+.receipt {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 380px;
+    width: 100%;
+    position: relative;
+    font-family: 'VT323', monospace;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.receipt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.02) 0px,
+        rgba(0, 0, 0, 0.02) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+.receipt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 0, 0, 0.1) 10px,
+        rgba(0, 0, 0, 0.1) 20px
+    );
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* Invoice details */
+.invoice-section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #000;
+}
+
+/* About section */
+.about-section {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.about-section h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Projects section */
+.projects-container {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+}
+
+.projects-tech-section {
+    margin: 20px 0;
+}
+
+.projects-section {
+    margin: 25px 0;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+    padding: 20px 0;
+}
+
+.section-headers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tech-header {
+    text-align: right;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.project-header h3,
+.tech-header h3 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.project-item {
+    font-size: 17px;
+    margin: 5px 0;
+}
+
+.tech-stacks {
+    text-align: right;
+}
+
+.section-divider {
+    border-bottom: 1px dashed #000;
+    margin: 15px 0;
+}
+
+/* Receipt details */
+.receipt-details {
+    margin-top: 20px;
+    font-family: 'VT323';
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.receipt-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-details {
+    grid-column: 1;
+}
+
+.right-details {
+    grid-column: 2;
+}
+
+.receipt-group.right-details .receipt-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.receipt-group.right-details .receipt-row span:last-child {
+    text-align: right;
+    min-width: 70px;
+}
+
+.bottom-details {
+    grid-column: 1 / -1;
+}
+
+.receipt-row {
+    display: flex;
+    margin: 5px 0;
+    white-space: pre;
+}
+
+.receipt-row span:last-child {
+    font-family: 'VT323';
+}
+
+.bottom-details .receipt-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px;
+    justify-content: end;
+    text-align: right;
+}
+
+.bottom-details .receipt-row span:first-child {
+    text-align: right;
+}
+
+
+/* Footer */
+.thank-you-section {
+    margin: 10px 0;
+    padding-top: 10px;
+    border-top: 1px dashed #000;
+}
+
+.thank-you {
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.datetime {
+    margin: -1px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.barcode {
+    text-align: center;
+}
+
+.barcode a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.barcode p {
+    color: #999;
+}
+
+.barcode svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.github-link {
+    font-size: 11px;
+    margin-top: 0px;
+    color: #333;
+}

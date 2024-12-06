@@ -1,0 +1,24 @@
+git config --global user.name "SANNNNN-123"
+git config --global user.email "zuhairaziz95@yahoo.com"
+
+git clone
+
+py -m venv myenv
+source myenv/Scripts/activate
+
+pip install -r requirements.txt
+
+playwright install
+
+##install Redis
+https://github.com/MicrosoftArchive/redis/releases
+
+
+================================================================================
+
+1) important to create virtual environment for each project such as they using different library for diff project
+py -m venv myenv
+
+2) activate the script
+.\myenv\Scripts\activate
+
