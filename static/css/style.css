@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-
 body {
     background-color: #f5f5f5;
     display: flex;
@@ -14,9 +13,7 @@ body {
     font-family: 'VT323', monospace;
 }
 
-
 /* Receipt paper effect */
-
 .receipt {
     background-color: #fff;
     padding: 40px;
@@ -59,6 +56,35 @@ body {
         rgba(0, 0, 0, 0.1) 10px,
         rgba(0, 0, 0, 0.1) 20px
     );
+}
+
+/* Directory section */
+.directory-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #000;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+}
+
+.directory-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.directory-label {
+    font-weight: bold;
+}
+
+.directory-value {
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.directory-value:hover {
+    text-decoration: underline;
 }
 
 /* Header */
@@ -185,6 +211,7 @@ body {
 .receipt-group {
     display: flex;
     flex-direction: column;
+    margin: 5px;
 }
 
 .left-details {
@@ -232,7 +259,6 @@ body {
     text-align: right;
 }
 
-
 /* Footer */
 .thank-you-section {
     margin: 10px 0;
@@ -275,4 +301,175 @@ body {
     font-size: 11px;
     margin-top: 0px;
     color: #333;
+}
+
+/* Catalog Container */
+.catalog-container {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog-drawer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+/* Year Section */
+.year-section {
+    margin-bottom: 20px;
+}
+
+.year-tab {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+}
+
+.year-label {
+    font-weight: bold;
+}
+
+.project-count {
+    font-family: 'VT323', monospace;
+}
+
+/* Project Tabs */
+.projects-list {
+    background: white;
+}
+
+.project-tab {
+    border-bottom: 1px solid #eee;
+}
+
+.project-tab:last-child {
+    border-bottom: none;
+}
+
+.project-row {
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 30px;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace;
+    transition: background-color 0.2s;
+}
+
+.project-row:hover {
+    background-color: #f8f8f8;
+}
+
+.project-id {
+    color: #666;
+    font-family: 'VT323', monospace;
+    font-size: 14px;
+}
+
+.project-name {
+    font-size: 14px;
+}
+
+.project-tech {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.expand-icon {
+    color: #666;
+    font-size: 12px;
+    text-align: right;
+    transition: transform 0.3s ease;
+}
+
+.project-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.project-tab.expanded .project-content {
+    max-height: 1000px;
+}
+
+.project-tab.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.project-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .catalog-container {
+        padding: 10px;
+    }
+    
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 12px 16px;
+    }
+    
+    .project-tech {
+        text-align: left;
+    }
+    
+    .expand-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .project-tab.expanded .expand-icon {
+        transform: translateY(-50%) rotate(180deg);
+    }
 }

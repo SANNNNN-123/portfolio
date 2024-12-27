@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANNNNN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="catalog-container">
+        <div class="catalog-drawer">
+            {% for year, year_projects in projects.items() %}
+                <div class="year-section">
+                    <div class="year-tab">
+                        <span class="year-label">{{ year }}</span>
+                        <span class="project-count">{{ '%03d' % year_projects|length }}</span>
+                    </div>
+                    <div class="projects-list">
+                        {% for project in year_projects %}
+                            <div class="project-tab">
+                                <div class="project-row">
+                                    <span class="project-id">{{ project.id }}</span>
+                                    <span class="project-name">{{ project.name }}</span>
+                                    <span class="project-tech">{{ project.tech }}</span>
+                                    <span class="expand-icon">▼</span>
+                                </div>
+                                <div class="project-content">
+                                    <img src="{{ project.image }}" alt="{{ project.name }}" class="project-image">
+                                    <p class="project-description">{{ project.description }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/" class="back-button">← Back to Receipt</a>
+    </div>
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+</body>
+</html>
