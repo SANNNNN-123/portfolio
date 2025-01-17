@@ -392,25 +392,32 @@ body {
 
 .expand-icon {
     color: #666;
-    font-size: 12px;
+    font-size: 16px;
     text-align: right;
     transition: transform 0.3s ease;
+}
+
+.expand-icon::after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #0066cc;
 }
 
 .project-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease-in-out;
     background-color: #f8f8f8;
     border-top: 1px solid #eee;
 }
 
 .project-tab.expanded .project-content {
-    max-height: 1000px;
+    max-height: 500px;
 }
 
-.project-tab.expanded .expand-icon {
-    transform: rotate(180deg);
+.project-tab.expanded .expand-icon::after {
+    content: '\2796'; /* Unicode character for "minus" sign (-) */
+    color: #0066cc;
 }
 
 .project-image {
@@ -425,7 +432,7 @@ body {
     line-height: 1.6;
     color: #333;
     margin: 0;
-    padding: 0 20px 20px;
+    padding: 20px 20px 20px;
 }
 
 /* Back Button */
@@ -470,6 +477,6 @@ body {
     }
     
     .project-tab.expanded .expand-icon {
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%);
     }
 }
