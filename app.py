@@ -77,4 +77,7 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=False)
+else:
+    # This is needed for Vercel deployment
+    app = app
 
