@@ -4,6 +4,8 @@
 
 body {
     background-color: #f5f5f5;
+    background-image: radial-gradient(#272626 1px, transparent 1px);
+    background-size: 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +23,7 @@ body {
     width: 100%;
     position: relative;
     font-family: 'VT323', monospace;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
 }
 
