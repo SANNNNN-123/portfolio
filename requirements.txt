@@ -7,3 +7,4 @@ requests==2.31.0
 soupsieve==2.6
 termcolor==2.4.0
 urllib3==2.2.3
+flask==3.0.2
