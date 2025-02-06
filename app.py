@@ -19,10 +19,17 @@ def project_directory():
                 "name": "Anime Connections",
                 "tech": "AI Agents",
                 "description": "Developed a multi-agent system to create a puzzle game inspired by The New York Times' Connections, featuring three specialized agents: Puzzle-Creator, Puzzle-Editor, and Puzzle-Debate."
+            },
+            {
+                "id": "003",
+                "name": "Resepi-GPT",
+                "tech": "React,NextJS,OpenAI,Supabase",
+                "description": "Resepi GPT is an AI-powered Malay recipe search engine that helps you find recipes based on ingredients you have"
             }
         ],
         "2024": [
             {
+
                 "id": "001",
                 "name": "Football-Analysis",
                 "tech": "OpenCV,YoloV8",
