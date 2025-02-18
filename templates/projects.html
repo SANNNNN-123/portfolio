@@ -20,7 +20,7 @@
                             <div class="project-tab">
                                 <div class="project-row">
                                     <span class="project-id">{{ project.id }}</span>
-                                    <span class="project-name">{{ project.name }}</span>
+                                    <span class="project-name">{{ project.name|safe }}</span>
                                     <span class="project-tech">{{ project.tech }}</span>
                                     <span class="expand-icon"></span>
                                 </div>

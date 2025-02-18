@@ -10,21 +10,27 @@ def project_directory():
         "2025": [
             {
                 "id": "001",
-                "name": "EYE_3Dmodel",
+                "name": "EYE_3Dmodel <span style='color: green;'>(ongoing)</span>",
                 "tech": "ThreeJS,React,Vite",
                 "description": "3D modelling for local ophtalmology clinic, using ThreeJS and React to create interactive 3D models of the eye for educational purposes."
             },
             {
                 "id": "002",
-                "name": "Anime Connections",
-                "tech": "AI Agents",
-                "description": "Developed a multi-agent system to create a puzzle game inspired by The New York Times' Connections, featuring three specialized agents: Puzzle-Creator, Puzzle-Editor, and Puzzle-Debate."
+                "name": "XLSX chatbot <span style='color: green;'>(ongoing)</span>",
+                "tech": "Ai agents, FastAPI,React",
+                "description": "Excel chatbot to perform data analysis and sql syntax"
             },
             {
                 "id": "003",
                 "name": "Resepi-GPT",
                 "tech": "React,NextJS,OpenAI,Supabase",
                 "description": "Resepi GPT is an AI-powered Malay recipe search engine that helps you find recipes based on ingredients you have"
+            },
+            {
+                "id": "004",
+                "name": "Stable Diffusion Puzzle",
+                "tech": "HuggingFace, ControlNet, React",
+                "description": "Generate a puzzle game using Stable Diffusion and ControlNet"
             }
         ],
         "2024": [
@@ -37,7 +43,7 @@ def project_directory():
             },
             {
                 "id": "002",
-                "name": "DamageTracker-Genshin",
+                "name": "DamageTracker",
                 "tech": "NN, DigitRecognizer",
                 "description": "A neural network-based damage tracker for the game Genshin Impact, using digit recognition to automatically log and analyze player damage output."
             },
