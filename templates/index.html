@@ -128,5 +128,9 @@
             </div>
         </div>
     </div>
+
+    {% if vercel_analytics %}
+    <script defer src="/_vercel/insights/script.js"></script>
+    {% endif %}
 </body>
 </html>
