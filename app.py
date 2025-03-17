@@ -31,6 +31,12 @@ def project_directory():
                 "name": "Stable Diffusion Puzzle",
                 "tech": "HuggingFace, ControlNet, React",
                 "description": "Generate a puzzle game using Stable Diffusion and ControlNet"
+            },
+            {
+                "id": "005",
+                "name": "Lego 2D",
+                "tech": "React, NextJS,Flux-Schnell",
+                "description": "2D Lego building simulator that allows users to create and share their own Lego creations."
             }
         ],
         "2024": [
